@@ -1,0 +1,191 @@
+:root{
+    --very-dark-blue: hsl(216, 12%, 8%);
+    --dark-blue-color: hsl(213, 19%, 18%);
+    --light-gray-color: hsl(217, 12%, 63%);
+    --medium-gray-color:  hsl(216, 12%, 54%);
+    --orange-color: hsl(25, 97%, 53%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    font-family: 'Overpass', sans-serif;
+    color: var(--light-gray-color);
+}
+
+#container{   
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: var(--very-dark-blue);
+
+}
+
+
+.card, .main-card{
+    max-width: 380px;
+    min-height: 360px;
+    display: grid;
+    align-items: center;
+    background: radial-gradient(circle at top, var(--dark-blue-color) 1%, var(--very-dark-blue) 140%);
+    padding: 20px 25px;
+    border-radius: 25px;
+}
+
+
+.star-icon{
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--dark-blue-color);
+    box-shadow: 0px 1px 2px var(--dark-blue-color);
+    margin-left: 20px;
+   
+}
+.star-icon-image{
+    margin: 0 auto;
+}
+
+.info-ratings{
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 10px;
+    margin-left: 20px;
+    
+}
+
+h1{
+    font-size: 28px;
+    color: white;
+    font-weight: 700;
+}
+
+.info-p{
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+.rating-numbers-section{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.rating-number{
+    padding: 15px 21px;
+    background-color: var(--dark-blue-color);
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 1px 2px var(--dark-blue-color);
+    transition: 300ms ease-in-out;
+    
+}
+
+.rating-number:hover{
+    color: white;
+    background-color: var(--orange-color);
+    
+}
+
+#btn-submit{
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+    background-color: var(--orange-color);
+    text-decoration: none;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 20px;
+    font-size: 15px;
+    text-shadow: 0 0 1px white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 300ms ease-in-out;
+    
+}
+
+
+#btn-submit:hover{
+    background-color: white;
+    color: var(--orange-color);
+    cursor: pointer;
+}
+
+.attribution{
+    text-align: center;
+    color: white;
+    padding: 10px;
+    background-color: var(--very-dark-blue);
+}
+
+.active-state{
+    background: var(--medium-gray-color);
+    color: white;
+}
+
+.hide{
+    display: none;
+}
+
+.error-message{
+    width: fit-content;
+    margin: 10px auto;
+    display: none;
+    color: var(--orange-color);
+    background-color: var(--dark-blue-color);
+    font-size: 13px;
+    padding: 5px 6px;  
+    box-shadow: 0 0 10px solid var(--medium-gray-color);
+    
+}
+
+
+/* Second card (thank you card) */
+
+.second-card{
+    display: none;
+    flex-direction: column;
+    padding: 20px 20px;
+    justify-content: space-evenly;
+    align-items: center;
+  
+}
+
+.rating-score{
+    padding: 7px 10px;
+    background-color: var(--dark-blue-color);
+    border-radius: 25px;
+    color: var(--orange-color);
+}
+
+.rating-score p{
+    opacity: 0.8;
+}
+
+.thanks-text{
+    max-width: 90%;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Responsive mobile*/
+
+@media (max-width: 400px){
+    .rating-numbers-section{
+        gap: 10px;
+    }
+
+}
